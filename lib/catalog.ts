@@ -1,0 +1,26 @@
+export const functions = [
+ 'Investment banking','M&A','Capital markets','Restructuring','Valuation','Private equity','Venture capital','Private credit','Hedge funds','Asset management','Investment research','Sales & trading','Quantitative finance','Wealth management','Private banking','Commercial banking','Corporate banking','Corporate finance','FP&A','Treasury','Transaction advisory','Accounting','Risk','Compliance','Insurance','Actuarial','Fintech','Payments','Real estate finance','Infrastructure finance','Public-sector finance'
+] as const;
+export const programs=['Insight program','Spring week','Discovery day','Pre-internship','Summer internship','Off-cycle internship','Internship','Placement','Apprenticeship','Graduate scheme','Rotational program','Full-time'] as const;
+export const stages=['saved','applied','assessment','interview','offer','rejected'] as const;
+export type SourceConfig={id:string;employer:string;industry:string;url:string;regions:string[];functions:string[];mode:'greenhouse'|'manual';gap?:string};
+export const sources:SourceConfig[]=[
+ {id:'gardacp',employer:'Garda Capital Partners',industry:'Alternative investments',functions:['Hedge funds','Sales & trading','Private credit'],regions:['United States','United Kingdom','Switzerland'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/gardacp'},
+ {id:'gcmgrosvenor',employer:'GCM Grosvenor',industry:'Alternative investments',functions:['Private equity','Asset management','Infrastructure finance','Real estate finance'],regions:['United States','United Kingdom'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/gcmgrosvenor'},
+ {id:'bridgewater89',employer:'Bridgewater Associates',industry:'Investment management',functions:['Hedge funds','Investment research','Quantitative finance'],regions:['United States'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/bridgewater89'},
+ {id:'capstoneinvestmentadvisors',employer:'Capstone Investment Advisors',industry:'Alternative investments',functions:['Hedge funds','Risk','Quantitative finance'],regions:['United States','United Kingdom'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/capstoneinvestmentadvisors'},
+ {id:'assuredguaranty',employer:'Assured Guaranty',industry:'Insurance',functions:['Insurance','Accounting','Risk','Public-sector finance'],regions:['United States','United Kingdom'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/assuredguaranty'},
+ {id:'compeerfinancial',employer:'Compeer Financial',industry:'Agricultural lending',functions:['Commercial banking','Insurance','Accounting','Credit analysis'],regions:['United States'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/compeerfinancial'},
+ {id:'robinhood',employer:'Robinhood',industry:'Fintech',functions:['Fintech','Accounting','Risk','Compliance','Treasury'],regions:['United States','United Kingdom','Canada'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/robinhood'},
+ {id:'perpay',employer:'Perpay',industry:'Payments & consumer credit',functions:['Corporate finance','Fintech','Payments','Risk'],regions:['United States'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/perpay'},
+ {id:'faradayfuture',employer:'Faraday Future',industry:'Automotive & technology',functions:['Accounting','Corporate finance','FP&A'],regions:['United States'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/faradayfuture'},
+ {id:'hevenaerotech',employer:'Heven AeroTech',industry:'Aerospace',functions:['Corporate finance','Accounting','FP&A'],regions:['United States'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/hevenaerotech'},
+ {id:'eqtcorporation',employer:'EQT Corporation',industry:'Energy',functions:['Accounting','Sales & trading','Treasury','Corporate finance'],regions:['United States'],mode:'greenhouse',url:'https://job-boards.greenhouse.io/eqtcorporation'},
+];
+export const coverageGaps=[
+ 'This is a curated directory, not an exhaustive U.S. job search. Investment banking, M&A, venture capital, wealth/private banking, transaction advisory, actuarial, and government employers need additional verified integrations.',
+ 'Insight, diversity-restricted, pre-internship, apprenticeship and graduate programs may use separate career portals. No openings are invented for empty categories.',
+ 'Only published Greenhouse job boards are automated in v1. Lever has a documented public API but no verified employer adapter is enabled. Workday, LinkedIn and login-protected sites are not scraped.',
+ 'Location, function, experience and program labels are rule-based search aids. Published requirements and the employer application page take precedence. Remote locations with no explicit country remain unknown.',
+];
+export type Opportunity={id:string;sourceId:string;sourceJobId:string;canonicalKey:string;employer:string;industry:string;title:string;functions:string[];program:string;experience:string;location:string;country:string;city:string;applicationUrl:string;sourceUrl:string;publishedAt:string|null;firstDiscovered:string;lastVerified:string;deadline:string|null;deadlineTimezone:string|null;deadlineText:string;programDates:string[];eligibility:string[];graduationYears:number[];compensation:string[];sponsorship:string[];description:string;cycle:string;status:'open'|'closed'|'unverified';missingCount:number;missingSince:string|null};

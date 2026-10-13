@@ -1,0 +1,33 @@
+/* Motion is opt-in when the device requests reduction. No navigation timers or remounts. */
+.scene-shell[data-animate=true] .view-panel:not([hidden]){animation:section-enter 220ms ease-out both!important}
+.scene-shell[data-animate=true] .page-heading{animation:heading-enter 260ms cubic-bezier(.2,.7,.2,1) both!important}
+.scene-shell[data-animate=true] .nav-marker{transition:transform 240ms cubic-bezier(.2,.8,.2,1),width 240ms ease!important}
+.scene-shell[data-animate=true] .threshold-image{animation:landscape-breathe 28s ease-in-out infinite alternate!important;transform-origin:68% 50%}
+.threshold:before{content:'';position:absolute;inset:-15%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 75% 40%,#edb27519,transparent 45%);opacity:.65}
+.scene-shell[data-animate=true] .threshold:before{animation:light-drift 22s ease-in-out infinite alternate!important}
+.scene-shell[data-animate=true] .scene-point>span{animation:marker-breathe 5s ease-in-out infinite!important}
+.scene-shell[data-animate=true] .scene-point:nth-child(2)>span{animation-delay:1.4s!important}
+.scene-shell[data-animate=true] .scene-point:nth-child(3)>span{animation-delay:2.8s!important}
+.scene-shell[data-animate=true] .exhibit-lines{animation:orbit-drift 32s ease-in-out infinite alternate!important;transform-origin:center}
+.scene-shell[data-animate=true] .scene-aperture img{transition:opacity .8s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)!important}
+.scene-shell[data-animate=true] .exhibit-description{animation:caption-enter 420ms cubic-bezier(.2,.7,.2,1) both!important}
+.personal-cover figure{overflow:hidden}
+.scene-shell[data-animate=true] .personal-cover img{animation:portrait-breathe 30s ease-in-out infinite alternate!important;transform-origin:center 65%}
+.scene-shell[data-animate=true] .personal-chapter{animation:caption-enter 350ms ease-out both!important}
+.scene-shell[data-animate=true] .scene-detail{animation:caption-enter 220ms ease-out both!important}
+.scene-shell[data-animate=true] .save-seal{animation:seal-save 2300ms both!important;display:flex}
+.scene-shell[data-animate=true] .scene-button,.scene-shell[data-animate=true] .btn,.scene-shell[data-animate=true] .ledger-rows button{transition:transform 180ms ease,background-color 180ms ease,border-color 180ms ease!important}
+@media(hover:hover){.scene-shell[data-animate=true] .scene-button:hover,.scene-shell[data-animate=true] .btn:hover{transform:translateY(-2px)}.scene-shell[data-animate=true] .ledger-rows button:hover{transform:translateX(5px)}}
+.scene-shell[data-animate=false] *,.scene-shell[data-animate=false] *:before,.scene-shell[data-animate=false] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.scene-shell[data-animate=false] .save-seal{display:none}
+.scene-shell[data-animate=true][data-motion-paused=true] *,.scene-shell[data-animate=true][data-motion-paused=true] *:before,.scene-shell[data-animate=true] [data-in-view=false] *,.scene-shell[data-animate=true] [data-in-view=false]:before,.scene-shell[data-animate=true] .view-panel[hidden] *{animation-play-state:paused!important}
+.scene-shell footer .motion-preference{display:flex;align-items:center;gap:8px;font-size:12px;color:#dfc7af;margin:0}
+.scene-shell footer .motion-preference select{width:auto;min-height:36px;margin:0;background:#251c1e;color:#efdfca;border:1px solid #796052;padding:6px 9px;font-size:12px}
+@keyframes section-enter{from{opacity:.35}to{opacity:1}}
+@keyframes heading-enter{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes caption-enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@keyframes landscape-breathe{from{transform:scale(1.025) translateX(-.35%)}to{transform:scale(1.07) translateX(.35%)}}
+@keyframes portrait-breathe{from{transform:scale(1)}to{transform:scale(1.035)}}
+@keyframes light-drift{from{transform:translate(-3%,2%);opacity:.35}to{transform:translate(3%,-2%);opacity:.85}}
+@keyframes orbit-drift{from{transform:rotate(-5deg);opacity:.27}to{transform:rotate(5deg);opacity:.5}}
+@keyframes marker-breathe{0%,100%{box-shadow:0 0 0 5px #d2aa8112}50%{box-shadow:0 0 0 11px #d2aa812b}}

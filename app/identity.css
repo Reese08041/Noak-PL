@@ -1,0 +1,99 @@
+/* NoakPL identity: expressive headings, quiet tools, four clear destinations. */
+@font-face{font-family:'Bricolage Grotesque';src:url('/fonts/bricolage-latin.woff2') format('woff2');font-style:normal;font-weight:400 700;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url('/fonts/instrument-latin.woff2') format('woff2');font-style:normal;font-weight:400 700;font-display:swap}
+:root{--font-display:'Bricolage Grotesque',Arial,sans-serif;--font-body:'Instrument Sans',Arial,sans-serif}
+body,button,input,textarea,select{font-family:var(--font-body)}
+.scene-shell .outreach-draft textarea,.scene-shell .study-stat strong span{font-family:var(--font-body)}
+.scene-shell .study-stat strong,.scene-shell .tracker-stat strong{font-family:var(--font-display);font-weight:500;font-variant-numeric:tabular-nums}
+.scene-shell h1,.scene-shell h2,.scene-shell h3,.scene-shell.working .page-heading h1,.scene-shell .personal-cover h1,.scene-shell .personal-chapter h2,.scene-shell .personal-note h2,.scene-shell .chapter-copy>strong{font-family:var(--font-display);font-weight:500;letter-spacing:-.04em}
+.scene-shell .eyebrow,.scene-shell .kicker{font-family:var(--font-body);font-weight:600;letter-spacing:.12em}
+.scene-shell .atlas-return>p,.scene-shell .exhibit-number,.scene-shell .ledger-rows b,.scene-shell .chapter-folio,.scene-shell .origin-number{font-family:var(--font-display)}
+.scene-shell .personal-signature{font-family:var(--font-display);font-style:normal;letter-spacing:-.045em}
+.scene-shell .topbar{grid-template-columns:minmax(165px,1fr) auto minmax(165px,1fr);align-items:center;gap:24px;min-height:88px;padding:0 32px;background:#191516;isolation:isolate}
+.scene-shell .brand{grid-column:1;grid-row:1;font:600 30px/1 var(--font-display);letter-spacing:-1.5px;align-items:center;white-space:nowrap}
+.scene-shell .brand>span:last-child{color:#dcab8d}
+.scene-shell .brand-symbol{filter:none;width:42px;height:42px;margin-right:11px}
+.scene-shell .rail-bottom{grid-column:3;grid-row:1;justify-self:end}
+.scene-shell .rail-profile{padding:6px 0;gap:10px;font-size:13px}
+.scene-shell .rail-profile small{font-size:11px;line-height:1.6}
+.scene-shell .topbar nav.primary-navigation{grid-column:2;grid-row:1;position:relative;display:flex;align-items:center;justify-content:center;gap:28px;overflow:visible;padding:0;margin:0;height:88px}
+.scene-shell .topbar .primary-navigation a{display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;height:100%;padding:0 2px!important;border:0;white-space:nowrap;font:500 14px/1.2 var(--font-body);letter-spacing:0;color:#b7aaa0;min-width:0}
+.scene-shell .topbar .primary-navigation a:hover{color:#f3e2ca;background:none}
+.scene-shell .topbar .primary-navigation a.active{color:#f3e2ca;border:0;background:none}
+.scene-shell .primary-navigation .nav-marker{height:3px;background:#dfb38f;border-radius:3px 3px 0 0}
+.scene-shell .section-navigation-shell{padding:0 32px;background:#211a1d;border-bottom:1px solid #5b41403d}
+.scene-shell .section-navigation{position:relative;display:flex;align-items:center;gap:30px;min-height:54px;width:fit-content;max-width:100%;margin:0 auto}
+.scene-shell .section-navigation a{display:flex;align-items:center;gap:8px;color:#bcae9f;font-size:14px;line-height:1.2;padding:18px 2px;text-decoration:none;white-space:nowrap}
+.scene-shell .section-navigation a:hover,.scene-shell .section-navigation a.active{color:#f7dec1}
+.scene-shell .section-navigation .nav-marker{position:absolute;left:0;top:0;pointer-events:none;height:2px;background:#d59a7c}
+.scene-shell .section-navigation .nav-count{font-size:11px;line-height:1;padding:4px 6px;border-radius:4px;min-width:20px;text-align:center}
+.scene-shell .utility-bar{font-family:var(--font-body);font-size:11px;letter-spacing:.07em;height:48px}
+.scene-shell.working .page-heading{padding:15px 0 30px;max-width:1000px}
+.scene-shell.working .page-heading h1{font-size:clamp(32px,4vw,55px);line-height:1.05;max-width:920px;text-wrap:balance}
+.scene-shell.working .page-heading .eyebrow{margin-bottom:13px}
+.scene-shell.working .page-heading .muted{font-size:16px;line-height:1.6;max-width:670px}
+.scene-shell.working .view-panel{border-top:3px solid #b88972;padding:32px;border-radius:0}
+.scene-shell .panel h2{font-size:25px;line-height:1.15}
+.scene-shell .job-card h2{font-size:25px;line-height:1.22}
+.scene-shell input,.scene-shell textarea{line-height:1.5}
+.scene-shell .threshold{height:calc(100svh - 88px)}
+.scene-shell .threshold-copy{top:13%;max-width:680px}
+.scene-shell .threshold h1{font-size:clamp(76px,8.2vw,122px);font-weight:500;letter-spacing:-.07em;line-height:.94;max-width:650px}
+.scene-shell .threshold h1 span{color:#ed9580}
+.scene-shell .threshold-copy>p:not(.eyebrow){font-size:18px;max-width:350px;line-height:1.65}
+.scene-shell .exhibit-heading h2{font-size:clamp(32px,3.5vw,50px);line-height:1.04}
+.scene-shell .exhibit-description h3{font-size:38px;line-height:1.05}
+.scene-shell .atlas-founder h2{font-size:clamp(38px,5vw,68px)}
+.scene-shell .saved-ledger h2{font-size:44px}
+.scene-shell .personal-cover h1{font-size:clamp(55px,6.5vw,94px);line-height:1}
+.scene-shell .personal-chapter h2{font-size:40px;line-height:1.1}
+.scene-shell footer{display:flex;flex-wrap:wrap;gap:18px 26px;align-items:center;padding-top:26px}
+.scene-shell footer .footer-about{font-family:var(--font-display);font-size:21px;color:#ead9c4;letter-spacing:-.03em;text-decoration:none;margin-right:auto}
+.scene-shell footer .footer-about span{display:block;font-family:var(--font-body);font-size:12px;letter-spacing:0;color:#bd9f86;margin-top:5px}
+.scene-shell footer>span{font-size:11px;color:#aa9a8c}
+/* Small directional gestures do not unmount views or block navigation. */
+.scene-shell[data-animate=true] .section-navigation a{transition:color 160ms ease!important}
+.scene-shell[data-animate=true] .brand-symbol{transition:transform 220ms cubic-bezier(.2,.8,.2,1)!important}
+.scene-shell[data-animate=true] .section-navigation-shell{animation:wayfinding-enter 180ms ease-out both!important}
+.scene-shell[data-animate=true] .primary-navigation a{transition:color 160ms ease!important}
+@media(hover:hover){.scene-shell[data-animate=true] .brand:hover .brand-symbol{transform:translateY(-2px) rotate(-4deg)}}
+@keyframes wayfinding-enter{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}
+@media(max-width:1050px){
+ .scene-shell .topbar{gap:18px;padding:0 24px;grid-template-columns:auto 1fr auto}
+ .scene-shell .topbar nav.primary-navigation{gap:20px}
+ .scene-shell .rail-profile>span:nth-child(2){display:none}
+ .scene-shell .brand{font-size:28px}
+}
+@media(max-width:700px){
+ .scene-shell .topbar{grid-template-columns:1fr auto;grid-template-rows:68px 54px;padding:0 18px;gap:0;min-height:122px}
+ .scene-shell .brand{font-size:27px}
+ .scene-shell .brand-symbol{width:36px;height:36px;margin-right:9px}
+ .scene-shell .rail-bottom{grid-column:2;grid-row:1}
+ .scene-shell .rail-profile .avatar{width:30px;height:30px}
+ .scene-shell .rail-profile>span:nth-child(2){display:block;font-size:12px}
+ .scene-shell .rail-profile small{display:none}
+ .scene-shell .topbar .sign-in{font-size:12px;min-height:36px;padding:6px 10px}
+ .scene-shell .topbar nav.primary-navigation{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:8px;height:54px;width:100%;margin:0;overflow:visible}
+ .scene-shell .topbar .primary-navigation a{font-size:13px;flex-shrink:1;padding:0!important}
+ .scene-shell .section-navigation-shell{padding:0 18px}
+ .scene-shell .section-navigation{width:100%;gap:16px;justify-content:center;min-height:52px}
+ .scene-shell .section-navigation a{font-size:13px;min-height:52px;padding:15px 1px;justify-content:center}
+ .scene-shell .utility-bar{height:44px;font-size:10px;letter-spacing:.02em}
+ .scene-shell .utility-bar>button{max-width:46%;font-size:10px;text-align:right}
+ .scene-shell.working .page-heading{padding:18px 0 25px}
+ .scene-shell.working .page-heading h1{font-size:35px;line-height:1.08}
+ .scene-shell.working .page-heading .muted{font-size:15px}
+ .scene-shell.working .view-panel{padding:22px 14px}
+ .scene-shell .threshold{height:calc(100svh - 122px);min-height:750px}
+ .scene-shell .threshold-copy{top:7%;max-width:86%}
+ .scene-shell .threshold h1{font-size:clamp(66px,18vw,85px);line-height:.96}
+ .scene-shell .threshold-copy>p:not(.eyebrow){font-size:16px;max-width:300px}
+ .scene-shell .exhibit-heading h2{font-size:39px}
+ .scene-shell .exhibit-description h3{font-size:33px}
+ .scene-shell .saved-ledger h2{font-size:35px}
+ .scene-shell .personal-cover h1{font-size:61px}
+ .scene-shell .personal-chapter h2{font-size:32px}
+ .scene-shell .personal-note h2{font-size:38px}
+ .scene-shell footer .footer-about{width:100%;font-size:24px}
+ .scene-shell footer{gap:20px}
+}
